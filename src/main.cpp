@@ -33,7 +33,6 @@ int main() {
     std::cout << "  Радиус: " << c3.getRadius() << " м\n";
     std::cout << "  Длина окружности: " << c3.getFerence() << " м\n";
     std::cout << "  Площадь: " << c3.getArea() << " м²\n\n";
-    
     std::cout << "=== Решение задач ===\n\n";
     // Задача "Земля и веревка"
     double gap = calculateEarthRopeGap();
