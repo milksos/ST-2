@@ -11,7 +11,6 @@ double calculateEarthRopeGap() {
     double earthFerence = earth.getFerence();
 
     double newFerence = earthFerence + ADDED_ROPE;
-    
     Circle newCircle(0);
     newCircle.setFerence(newFerence);
 
@@ -23,7 +22,6 @@ double calculatePoolCost() {
     const double PATH_WIDTH = 1.0;
     const double CONCRETE_COST = 1000.0;
     const double FENCE_COST = 2000.0;
-    
     Circle pool(POOL_RADIUS);
     Circle outerCircle(POOL_RADIUS + PATH_WIDTH);
 
@@ -32,6 +30,5 @@ double calculatePoolCost() {
 
     double fenceLength = outerCircle.getFerence();
     double fenceCost = fenceLength * FENCE_COST;
-    
     return concreteCost + fenceCost;
 }

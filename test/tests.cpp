@@ -143,7 +143,6 @@ TEST(CircleTest, ConsistencyTest) {
     double r = c.getRadius();
     double f = c.getFerence();
     double a = c.getArea();
-    
     EXPECT_DOUBLE_EQ(f, 2 * PI * r);
     EXPECT_DOUBLE_EQ(a, PI * r * r);
 }
@@ -177,12 +176,10 @@ TEST(TasksTest, PoolCostValue) {
 TEST(TasksTest, PoolCostComponents) {
     Circle pool(3.0);
     Circle outer(4.0);
-    
     double pathArea = outer.getArea() - pool.getArea();
     double concreteCost = pathArea * 1000.0;
     double fenceCost = outer.getFerence() * 2000.0;
-    double totalCost = concreteCost + fenceCost;
-    
+    double totalCost = concreteCost + fenceCost
     EXPECT_DOUBLE_EQ(totalCost, calculatePoolCost());
 }
 
