@@ -179,10 +179,9 @@ TEST(TasksTest, PoolCostComponents) {
     double pathArea = outer.getArea() - pool.getArea();
     double concreteCost = pathArea * 1000.0;
     double fenceCost = outer.getFerence() * 2000.0;
-    double totalCost = concreteCost + fenceCost
+    double totalCost = concreteCost + fenceCost;
     EXPECT_DOUBLE_EQ(totalCost, calculatePoolCost());
 }
-
 TEST(CircleTest, VerySmallRadiusTest) {
     Circle c(1e-10);
     EXPECT_DOUBLE_EQ(c.getRadius(), 1e-10);
